@@ -2,11 +2,11 @@
 // Solderpad Hardware License, Version 0.51, see LICENSE for details.
 // SPDX-License-Identifier: SHL-0.51
 
-#include <tb_lib.hh>
+#include "../test/bootdata.h"
 
 namespace sim {
 
-const BootData BOOTDATA = {.boot_addr = ${hex(cfg['cluster']['boot_addr'])},
+extern "C" const BootData BOOTDATA = {.boot_addr = ${hex(cfg['cluster']['boot_addr'])},
                            .core_count = ${cfg['cluster']['nr_cores']},
                            .hartid_base = ${cfg['cluster']['cluster_base_hartid']},
                            .tcdm_start = ${hex(cfg['cluster']['cluster_base_addr'])},
