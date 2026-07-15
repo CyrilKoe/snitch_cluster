@@ -35,7 +35,7 @@ export_include_dirs:
   - hw/tcdm_interface/include
   - hw/snitch/include
   - hw/snitch_ssr/include
-  - target/snitch_cluster/generated
+  - target/snitch_cluster/.generated
 
 sources:
   # reqrsp_interface
